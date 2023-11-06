@@ -11,7 +11,6 @@ public class Program {
     public static Imenik imenik = new Imenik();
 
     public static void main(String[] args) throws Izuzetak {
-        popuniPodatke();
         while(true){
             System.out.println("Unesite zeljenu komandu: dodaj, dajBroj, dajIme, naSlovo, izGrada, izGradaBrojevi, imenik, izlaz");
             String unos = scanner.nextLine();
@@ -116,10 +115,4 @@ public class Program {
         return null;
     }
 
-    private static void popuniPodatke() throws Izuzetak {
-        imenik.dodaj("Belmin", new FiksniBroj(Grad.ZENICA, "456-789"));
-        imenik.dodaj("Tarik", new FiksniBroj(Grad.SARAJEVO, "496-721"));
-        imenik.dodaj("Nina", new MobilniBroj(62,"784-321"));
-        imenik.dodaj("Alma", new MedunarodniBroj("+49","457896321"));
-    }
 }
