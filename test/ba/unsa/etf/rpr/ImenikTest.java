@@ -3,8 +3,12 @@ package ba.unsa.etf.rpr;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
+import org.mockito.Mockito;
+
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.mock;
 
 public class ImenikTest {
     private static Imenik imenik = new Imenik();
@@ -45,5 +49,22 @@ public class ImenikTest {
         });
     }
 
+    @Test
+    public void testMockExternal() {
+        Imenik i = mock(Imenik.class);
+        Mockito.when(i.dajBroj("Belmin")).thenReturn("Nema nista");
 
+        String t=i.dajBroj("Belmin");
+        assertEquals(t,"Nema nista");
+    }
+
+    @Test
+    public void testMockInternal() throws Izuzetak {
+        Map<String, TelefonskiBroj> mapa = mock(Map.class);
+        Mockito.when(mapa.get("Amar")).thenReturn(new FiksniBroj(Grad.SARAJEVO, "123-123"));
+
+        String br=imenik.dajBroj("Amar");
+        assertNotEquals(br, "036/123-123");
+        assertEquals(br,"033/123-123");
+    }
 }
