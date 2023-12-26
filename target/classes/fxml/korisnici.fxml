@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.lv78.Controller">
+   <children>
+      <BorderPane GridPane.rowSpan="5">
+         <center>
+            <ListView fx:id="listKorisnici" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+               </BorderPane.margin></ListView>
+         </center>
+      </BorderPane>
+      <Label alignment="TOP_LEFT" text="Ime: " GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin></Label>
+      <Label text="Prezime: " GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin></Label>
+      <Label text="E-mail:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin></Label>
+      <Label text="Korisnicko ime: " GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin></Label>
+      <Label text="Lozinka:" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin></Label>
+      <TextField fx:id="fldIme" GridPane.columnIndex="3">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin></TextField>
+      <TextField fx:id="fldPrezime" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin></TextField>
+      <TextField fx:id="fldEmail" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin></TextField>
+      <TextField fx:id="fldKorisnickoIme" GridPane.columnIndex="3" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin></TextField>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+        <buttons>
+          <Button fx:id="dodajClick" defaultButton="true" mnemonicParsing="false" onAction="#dodajKorisnika" text="Dodaj" />
+            <Button cancelButton="true" mnemonicParsing="false" onAction="#krajClicked" text="Kraj">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding></Button>
+        </buttons>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </ButtonBar>
+      <PasswordField fx:id="fldLozinka" GridPane.columnIndex="3" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </PasswordField>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints hgrow="ALWAYS" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
